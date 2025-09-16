@@ -8,8 +8,8 @@ namespace Tyuiu.DanilovAS.Sprint2.Task0.V1.Test
         public void TestGetCompareOperations()
         {
             DataService ds = new DataService();
-            //x = 233. y = 122
-            int x = 233; int y = 122;
+            int x = 233;
+            int y = 122;
             bool[] res = new bool[6];
             res = ds.GetCompareOperations(x, y);
             bool[] wait = new bool[6] {true,false,true,false,true,false};

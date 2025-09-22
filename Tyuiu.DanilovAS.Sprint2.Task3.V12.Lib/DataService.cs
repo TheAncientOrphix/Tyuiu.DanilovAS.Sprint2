@@ -9,7 +9,7 @@ namespace Tyuiu.DanilovAS.Sprint2.Task3.V12.Lib
 
             if (x > 1)
             {
-                res = x + Math.Pow((x + 1 / (x - 1)), x);
+                res = x + Math.Pow(((x + 1) / (x - 1)), x);
             }
 
             else if (x > -16 && x < 2 && x != 0)

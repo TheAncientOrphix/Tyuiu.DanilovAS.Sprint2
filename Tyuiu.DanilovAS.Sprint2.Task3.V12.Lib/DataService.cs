@@ -12,7 +12,7 @@ namespace Tyuiu.DanilovAS.Sprint2.Task3.V12.Lib
                 res = x + Math.Pow((x + 1 / (x - 1)), x);
             }
 
-            else if (x > -16 && x < 2)
+            else if (x > -16 && x < 2 && x != 0)
             {
                 res = Math.Pow(7 + 5/x*x,x);
             }

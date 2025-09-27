@@ -9,13 +9,13 @@ namespace Tyuiu.DanilovAS.Sprint2.Task7.V12.Lib
             double y1 = Math.Pow(x, 2);
             double y2 = 2 - x;
 
-            if ((x >=0 && x<=1) && (y>=y1) && (y <= y2))
+            if ((x >= 0 && x <= 1 && y >= 0 && y <= x * x) || (x <= -2 && y >= 0 && y <= 2 - x))
             {
                 res = true;
             }
             else
             {
-                res= false;
+                res = false;
             }
 
             return res;

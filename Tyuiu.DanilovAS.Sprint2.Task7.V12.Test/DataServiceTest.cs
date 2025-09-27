@@ -10,7 +10,7 @@ namespace Tyuiu.DanilovAS.Sprint2.Task7.V12.Test
             DataService ds = new DataService();
             double x = 0.5;
             double y = 0.6;
-            var wait = true;
+            var wait = false;
             var res = ds.CheckDotInShadedArea(x, y);
             Assert.AreEqual(wait, res);
         }
@@ -22,6 +22,17 @@ namespace Tyuiu.DanilovAS.Sprint2.Task7.V12.Test
             double x = 0.5;
             double y = 2;
             var wait = false;
+            var res = ds.CheckDotInShadedArea(x, y);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void TestThreeCheckDotInShadedArea()
+        {
+            DataService ds = new DataService();
+            double x = 0.1;
+            double y = 0;
+            var wait = true;
             var res = ds.CheckDotInShadedArea(x, y);
             Assert.AreEqual(wait, res);
         }

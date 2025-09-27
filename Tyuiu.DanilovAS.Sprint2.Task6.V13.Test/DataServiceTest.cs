@@ -8,10 +8,10 @@ namespace Tyuiu.DanilovAS.Sprint2.Task6.V13.Test
         public void TestFindDateOfNextDay()
         {
             DataService ds = new DataService();
-            int g = 2025;
-            int m = 1;
-            int n = 31;
-            var wait = "1.02.2025";
+            int g = 2024;
+            int m = 9;
+            int n = 8;
+            var wait = "09.09.2024";
             var res = ds.FindDateOfNextDay(g, m, n);
             Assert.AreEqual(wait, res);
         }

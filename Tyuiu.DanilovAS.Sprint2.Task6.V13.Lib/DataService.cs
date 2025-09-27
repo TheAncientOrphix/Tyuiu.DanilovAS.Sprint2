@@ -44,20 +44,21 @@ namespace Tyuiu.DanilovAS.Sprint2.Task6.V13.Lib
             }
             daysInMonth++;
 
-            if (daysInMonth > n)
+            if (n > daysInMonth)
             {
                 n = 1;
                 m++;
-                if (m > 12)
-                {
-                    m = 1;
-                    g++;
-                }
             }
 
             else
             {
                 n++;
+            }
+
+            if (m > 12)
+            {
+                m = 1;
+                g++;
             }
 
             string mounth;
@@ -71,7 +72,18 @@ namespace Tyuiu.DanilovAS.Sprint2.Task6.V13.Lib
                 mounth = Convert.ToString(m); 
             }
 
-            result = $"{n}.{mounth}.{g}";
+            string days;
+
+            if (n < 10)
+            {
+                days = $"0{n}";
+            }
+            else
+            {
+                days = Convert.ToString(n);
+            }
+
+            result = $"{days}.{mounth}.{g}";
             return result;
         }
     }

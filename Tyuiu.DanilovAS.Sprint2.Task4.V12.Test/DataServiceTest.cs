@@ -13,6 +13,7 @@ namespace Tyuiu.DanilovAS.Sprint2.Task4.V12.Test
             var wait = 9.076;
             var res = ds.Calculate(x, y);
             Assert.AreEqual(wait, res);
+
         }
     }
 }

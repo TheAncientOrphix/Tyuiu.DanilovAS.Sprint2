@@ -5,30 +5,74 @@ namespace Tyuiu.DanilovAS.Sprint2.Task6.V13.Lib
     {
         public string FindDateOfNextDay(int g, int m, int n)
         {
-            /*366 дней в году
-             * n - число
-             * m - месяц
-             * g - год
-             * 
-            Январь - 31 день
-            Февраль - 28 дней(29 в високосном)
-            Март - 31 день
-            Апрель - 30 дней
-            Май - 31 день
-            Июнь - 30 дней
-            Июль - 31 день
-            Август - 31 день
-            Сентябрь - 30 дней
-            Октябрь - 31 день
-            Ноябрь - 30 дней
-            Декабрь - 31 день*/
             string result;
-            switch (n,m)
+            int daysInMonth;
+            switch (m)
             {
-                
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    {
+                        daysInMonth = 31;
+                        break;
+                    }
+
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    {
+                        daysInMonth = 30;
+                        break;
+                    }
+
+                case 2:
+                    {
+                        daysInMonth = 29;
+                        break;
+                    }
+
+                default:
+                    {
+                        return "Ошибка"; break;
+                    }
+
+            }
+            daysInMonth++;
+
+            if (daysInMonth > n)
+            {
+                n = 1;
+                m++;
+                if (m > 12)
+                {
+                    m = 1;
+                    g++;
+                }
             }
 
-            throw new NotImplementedException();
+            else
+            {
+                n++;
+            }
+
+            string mounth;
+
+            if (m < 10)
+            {
+                mounth = $"0{m}";
+            }
+            else
+            {
+                mounth = Convert.ToString(m); 
+            }
+
+            result = $"{n}.{mounth}.{g}";
+            return result;
         }
     }
 }

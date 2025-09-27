@@ -36,6 +36,8 @@ namespace Tyuiu.DanilovAS.Sprint2.Task6.V13
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
+            string res = ds.FindDateOfNextDay(g, m, n);
+            Console.WriteLine($"{res}");
             Console.ReadKey();
         }
     }

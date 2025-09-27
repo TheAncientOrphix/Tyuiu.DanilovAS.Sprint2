@@ -8,9 +8,9 @@ namespace Tyuiu.DanilovAS.Sprint2.Task4.V12.Test
         public void TestCalculate()
         {
             DataService ds = new DataService();
-            double x = 2;
+            double x = 9;
             double y = 4;
-            var wait = 11.941;
+            var wait = 9.076;
             var res = ds.Calculate(x, y);
             Assert.AreEqual(wait, res);
         }
